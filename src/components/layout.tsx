@@ -1,6 +1,9 @@
+/** @jsx jsx */
+import { ThemeProvider, jsx } from 'theme-ui';
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
+import theme from '../gatsby-plugin-theme-ui';
 import Header from './header';
 import './layout.css';
 
@@ -20,10 +23,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   `);
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
-        style={{
+        sx={{
           margin: `0 auto`,
           maxWidth: 960,
           padding: `0 1.0875rem 1.45rem`,
@@ -34,7 +37,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           ©{new Date().getFullYear()},{data.site.siteMetadata.title}
         </footer>
       </div>
-    </>
+    </ThemeProvider>
   );
 };
 

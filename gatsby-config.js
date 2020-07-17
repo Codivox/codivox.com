@@ -5,6 +5,12 @@ module.exports = {
     author: `@codivox`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-theme-ui`,
+      options: {
+        preset: "@theme-ui/preset-tailwind",
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
