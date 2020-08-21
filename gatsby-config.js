@@ -42,8 +42,15 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Josefin Sans:bold', 'Lato:400,700'],
-        },
+          families: ['Josefin Sans:bold', 'Lato:400,700']
+        }
+      }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-176005700-1",
+        head: false,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

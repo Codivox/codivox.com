@@ -4,5 +4,6 @@ export default {
     background: 'white',
     footer: '#F4F5FF',
     mainDark: '#5954ff',
+    heading: '#141633',
   },
 };

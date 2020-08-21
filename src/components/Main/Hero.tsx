@@ -16,7 +16,6 @@ const Hero: React.FC = () => {
         gridAutoFlow: ['dense', null],
         minHeight: '635px',
         alignItems: 'center',
-        // justifyItems: 'center',
         mb: ['80px', '0px'],
       }}
     >
@@ -30,19 +29,24 @@ const Hero: React.FC = () => {
           textAlign: ['center', 'left'],
         }}
       >
-        <Heading sx={{ fontSize: ['24px', '38px'] }}>{heroTitle}</Heading>
-        <p sx={{ maxWidth: '370px', opacity: '0.85' }}>{heroSubtitle}</p>
-        <button sx={{ variant: 'buttons.prime', width: ['100%', 210] }}>
+        <Heading sx={{ fontSize: ['24px', '38px'], mt: [3, 0] }}>
+          {heroTitle}
+        </Heading>
+        <p sx={{ maxWidth: '370px', opacity: '0.85', mx: ['auto', 0] }}>
+          {heroSubtitle}
+        </p>
+        <button
+          sx={{ variant: 'buttons.prime', width: ['100%', 210], mt: [3, 0] }}
+        >
           Get a free estimate
         </button>
       </Flex>
       <HeroSVG
         sx={{
-          '@media screen and (max-width: 40rem)': {
-            gridRow: 1,
-            gridColumn: 1,
-          },
+          gridRow: [1, 'unset'],
+          gridColumn: [1, 'unset'],
           width: '100%',
+          mt: [2, 0],
         }}
       />
     </Box>
