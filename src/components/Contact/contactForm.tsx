@@ -3,6 +3,8 @@ import { Box, Flex, Heading, jsx } from 'theme-ui';
 import { Link } from 'gatsby';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
 import Man from '../../images/man';
 import Conplus from '../../images/conplus';
@@ -10,8 +12,10 @@ import Clock from '../../images/clock';
 
 const ContactForm: React.FC = () => {
   const { register, handleSubmit, watch, errors } = useForm();
+  const MySwal = withReactContent(Swal)
+
   const onSubmit = (data: any) => {
-    console.log(data);
+    // console.log(data);
     fetch('/.netlify/functions/email', {
       method: 'POST', // *GET, POST, PUT, DELETE, etc.
       mode: 'no-cors', // no-cors, *cors, same-origin
@@ -22,8 +26,37 @@ const ContactForm: React.FC = () => {
       body: JSON.stringify(data), // body data type must match "Content-Type" header
     })
       .then((result) => result.json())
-      .then((response) => console.log(response))
-      .catch((e) => console.log(e, 'is error'));
+      .then((response) => {
+        console.log(response.status);
+        if (response.status === 200 || response.status === 201) {
+          MySwal.fire({
+            icon: 'success',
+            title: response.message,
+            showConfirmButton: false,
+            timer: 1500
+          })
+        }
+        else {
+          MySwal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Something went wrong!',
+            showCloseButton: true,
+            footer: `Reach us at &nbsp <a href="mailto:hello@codivox.com">hello@codivox.com</a>`
+          })
+        }
+      })
+      .catch((e) => {
+        console.log(e, 'is error');
+        MySwal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Something went wrong!',
+          showCloseButton: true,
+          showConfirmButton: false,
+          footer: `Reach us at &nbsp <a href="mailto:hello@codivox.com">hello@codivox.com</a>`
+        })
+      });
   };
 
   return (
@@ -66,7 +99,7 @@ const ContactForm: React.FC = () => {
             sx={{
               display: 'grid',
               gridTemplateColumns: ['1fr', '1fr 1fr'],
-              gridTtemplateRrows: ['1fr 1fr 1fr 1fr'],
+              // gridTemplateRows: ['1fr 1fr 1fr 1fr'],
             }}
           >
             <Box>

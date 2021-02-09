@@ -4,10 +4,10 @@ const axios = require("axios")
 const bodyParser = require("body-parser")
 const express = require('express');
 const app = express()
-app.use(helmet()) 
+app.use(helmet())
 app.use(bodyParser.json())
 app.post("/.netlify/functions/email", async (req, res, next) => {
- 
+
   const {email,fullName,phoneNumber,call,e_mail,either,text,} = JSON.parse(req.body)
   try {
     await axios.post(process.env.GATSBY_SLACK_URL, {
@@ -17,7 +17,7 @@ app.post("/.netlify/functions/email", async (req, res, next) => {
           "type": "section",
           "text": {
             "type": "mrkdwn",
-            "text": `from ### ${fullName} with conatact details: \n
+            "text": `from ### ${fullName} with contact details: \n
             ${phoneNumber ? ":iphone: " + phoneNumber : ""} and :email: ${email} \n
             would prefer contact via ${!either && call ? ":iphone:" : ":email:"} \n
             and is interested in : \n
@@ -38,4 +38,3 @@ app.post("/.netlify/functions/email", async (req, res, next) => {
 })
 module.exports.handler = serverless(app)
 
-      
