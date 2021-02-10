@@ -102,150 +102,152 @@ const ContactForm: React.FC = () => {
               </a>
             </p>
           </Flex>
-          <form
-            onSubmit={handleSubmit(onSubmit)}
-            sx={{
-              display: 'grid',
-              gridTemplateColumns: ['1fr', '1fr 1fr'],
-              // gridTemplateRows: ['1fr 1fr 1fr 1fr'],
-            }}
-          >
-            <Box>
-              <label sx={{ fontWeight: 'bold', mb: 1, display: 'block' }}>
-                What's your name?*
-              </label>
-              <input
-                sx={{
-                  background: 'rgba(20, 22, 51, 0.1)',
-                  height: '50px',
-                  width: '90%',
-                  borderRadius: '5px',
-                  border: 'none',
-                  boxShadow: '0px 0px 10px 0px rgba(20, 22, 51, 0.1)',
-                  display: 'block',
-                  mb: '20px',
-                  px: '15px',
-                  fontSize: '16px',
-                }}
-                name="fullName"
-                ref={register}
-              />
-            </Box>
-            <Box>
-              <label sx={{ fontWeight: 'bold', mb: 1, display: 'block' }}>
-                What's your email?*
-              </label>
-              <input
-                sx={{
-                  background: 'rgba(20, 22, 51, 0.1)',
-                  height: '50px',
-                  width: '90%',
-                  borderRadius: '5px',
-                  border: 'none',
-                  boxShadow: '0px 0px 10px 0px rgba(20, 22, 51, 0.1)',
-                  display: 'block',
-                  px: '15px',
-                  fontSize: '16px',
-                }}
-                name="email"
-                ref={register}
-              />
-            </Box>
-            <Box>
-              <label sx={{ fontWeight: 'bold', mb: 1, display: 'block' }}>
-                Phone Number(Optional)
-              </label>
-              <input
-                sx={{
-                  background: 'rgba(20, 22, 51, 0.1)',
-                  height: '50px',
-                  width: '90%',
-                  borderRadius: '5px',
-                  border: 'none',
-                  boxShadow: '0px 0px 10px 0px rgba(20, 22, 51, 0.1)',
-                  display: 'block',
-                  mb: '20px',
-                  px: '15px',
-                  fontSize: '16px',
-                }}
-                name="phoneNumber"
-                ref={register}
-              />
-            </Box>
-            <Box>
-              <label sx={{ fontWeight: 'bold', mb: 15, display: 'block' }}>
-                Do you prefer we call or email you?
-              </label>
-
-              <label>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <Box
+              sx={{
+                display: 'grid',
+                gridTemplateColumns: ['1fr', '1fr 1fr'],
+                // gridTemplateRows: ['1fr 1fr 1fr 1fr'],
+              }}
+            >
+              <Box>
+                <label sx={{ fontWeight: 'bold', mb: 1, display: 'block' }}>
+                  What's your name?*
+                </label>
                 <input
-                  type="radio"
-                  name="preference"
-                  value="Call"
+                  sx={{
+                    background: 'rgba(20, 22, 51, 0.1)',
+                    height: '50px',
+                    width: '90%',
+                    borderRadius: '5px',
+                    border: 'none',
+                    boxShadow: '0px 0px 10px 0px rgba(20, 22, 51, 0.1)',
+                    display: 'block',
+                    mb: '20px',
+                    px: '15px',
+                    fontSize: '16px',
+                  }}
+                  name="fullName"
                   ref={register}
                 />
-                Call
-              </label>
-
-              <label>
+              </Box>
+              <Box>
+                <label sx={{ fontWeight: 'bold', mb: 1, display: 'block' }}>
+                  What's your email?*
+                </label>
                 <input
-                  type="radio"
-                  name="preference"
-                  value="Email"
+                  sx={{
+                    background: 'rgba(20, 22, 51, 0.1)',
+                    height: '50px',
+                    width: '90%',
+                    borderRadius: '5px',
+                    border: 'none',
+                    boxShadow: '0px 0px 10px 0px rgba(20, 22, 51, 0.1)',
+                    display: 'block',
+                    px: '15px',
+                    fontSize: '16px',
+                  }}
+                  name="email"
                   ref={register}
                 />
-                Email
-              </label>
-
-              <label>
+              </Box>
+              <Box>
+                <label sx={{ fontWeight: 'bold', mb: 1, display: 'block' }}>
+                  Phone Number(Optional)
+                </label>
                 <input
-                  type="radio"
-                  name="preference"
-                  value="Either"
+                  sx={{
+                    background: 'rgba(20, 22, 51, 0.1)',
+                    height: '50px',
+                    width: '90%',
+                    borderRadius: '5px',
+                    border: 'none',
+                    boxShadow: '0px 0px 10px 0px rgba(20, 22, 51, 0.1)',
+                    display: 'block',
+                    mb: '20px',
+                    px: '15px',
+                    fontSize: '16px',
+                  }}
+                  name="phoneNumber"
                   ref={register}
                 />
-                Either
-              </label>
+              </Box>
+              <Box>
+                <label sx={{ fontWeight: 'bold', mb: 15, display: 'block' }}>
+                  Do you prefer we call or email you?
+                </label>
+
+                <label sx={{ mr: '5px' }}>
+                  <input
+                    sx={{ mr: '5px' }}
+                    type="radio"
+                    name="preference"
+                    value="Call"
+                    ref={register}
+                  />
+                  Call
+                </label>
+
+                <label sx={{ mr: '5px' }}>
+                  <input
+                    sx={{ mr: '5px' }}
+                    type="radio"
+                    name="preference"
+                    value="Email"
+                    ref={register}
+                  />
+                  Email
+                </label>
+
+                <label>
+                  <input
+                    sx={{ mr: '5px' }}
+                    type="radio"
+                    name="preference"
+                    value="Either"
+                    ref={register}
+                  />
+                  Either
+                </label>
+              </Box>
+              <Box>
+                <label sx={{ fontWeight: 'bold', mb: 1, display: 'block' }}>
+                  Tell us a little bit about your project.
+                </label>
+                <textarea
+                  sx={{
+                    background: 'rgba(20, 22, 51, 0.1)',
+                    height: '100px',
+                    width: '190%',
+                    borderRadius: '5px',
+                    border: 'none',
+                    boxShadow: '0px 0px 10px 0px rgba(20, 22, 51, 0.1)',
+                    display: 'block',
+                    p: '15px',
+                    fontSize: '16px',
+                  }}
+                  name="text"
+                  ref={register}
+                />
+              </Box>
             </Box>
-            <Box>
-              <label sx={{ fontWeight: 'bold', mb: 1, display: 'block' }}>
-                Tell us a little bit about your project.
-              </label>
-              <textarea
-                sx={{
-                  background: 'rgba(20, 22, 51, 0.1)',
-                  height: '100px',
-                  width: '190%',
-                  borderRadius: '5px',
-                  border: 'none',
-                  boxShadow: '0px 0px 10px 0px rgba(20, 22, 51, 0.1)',
-                  display: 'block',
-                  p: '15px',
-                  fontSize: '16px',
-                }}
-                name="text"
-                ref={register}
-              />
-            </Box>
-            <span />
             {(errors.fullName || errors.email) && (
               <span
                 style={{
                   color: 'red',
-                  position: 'absolute',
-                  bottom: '-70px',
+                  position: 'relative',
                   fontSize: '15px',
                 }}
               >
-                Name and email are required, we promise not to spam 🙏🏼
+                Name and valid email are required, we promise not to spam 🙏🏼
               </span>
             )}
             {/*<span></span>*/}
             <Box
               sx={{
                 width: '150%',
-                mt: '30px',
-                mb: '101px',
+                mt: '10px',
+                mb: '100px',
                 display: 'flex',
                 alignItems: 'center',
               }}
