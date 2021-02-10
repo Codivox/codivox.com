@@ -47,11 +47,22 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-web-font-loader',
+      resolve: `gatsby-plugin-webfonts`,
       options: {
-        google: {
-          families: ['Josefin Sans:bold', 'Lato:400,700'],
+        fonts: {
+          google: [
+            {
+              family: 'Josefin Sans',
+              variants: ['700'],
+              fontDisplay: 'block',
+            },
+            {
+              family: 'Lato',
+              variants: ['400', '700'],
+            },
+          ],
         },
+        //usePreload: true,
       },
     },
     {

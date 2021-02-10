@@ -43,6 +43,8 @@ const Hero: React.FC = () => {
               fontSize: ['24px', '24px', '38px'],
               mt: [3, 3, 0],
               color: `#000053`,
+              // fontFamily: 'heading',
+              display: 'block',
             }}
           >
             {heroTitle}
