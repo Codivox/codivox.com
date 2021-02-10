@@ -3,6 +3,8 @@ import { Box, Flex, Heading, jsx } from 'theme-ui';
 import { Link } from 'gatsby';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 
@@ -10,8 +12,15 @@ import Man from '../../images/man';
 import Conplus from '../../images/conplus';
 import Clock from '../../images/clock';
 
+const schema = yup.object().shape({
+  fullName: yup.string().required(),
+  email: yup.string().email().required(),
+});
+
 const ContactForm: React.FC = () => {
-  const { register, handleSubmit, watch, errors } = useForm();
+  const { register, handleSubmit, watch, errors } = useForm({
+    resolver: yupResolver(schema),
+  });
   const MySwal = withReactContent(Swal);
 
   const onSubmit = (data: any) => {
@@ -115,6 +124,8 @@ const ContactForm: React.FC = () => {
                   boxShadow: '0px 0px 10px 0px rgba(20, 22, 51, 0.1)',
                   display: 'block',
                   mb: '20px',
+                  px: '15px',
+                  fontSize: '16px',
                 }}
                 name="fullName"
                 ref={register}
@@ -133,6 +144,8 @@ const ContactForm: React.FC = () => {
                   border: 'none',
                   boxShadow: '0px 0px 10px 0px rgba(20, 22, 51, 0.1)',
                   display: 'block',
+                  px: '15px',
+                  fontSize: '16px',
                 }}
                 name="email"
                 ref={register}
@@ -152,6 +165,8 @@ const ContactForm: React.FC = () => {
                   boxShadow: '0px 0px 10px 0px rgba(20, 22, 51, 0.1)',
                   display: 'block',
                   mb: '20px',
+                  px: '15px',
+                  fontSize: '16px',
                 }}
                 name="phoneNumber"
                 ref={register}
@@ -163,17 +178,32 @@ const ContactForm: React.FC = () => {
               </label>
 
               <label>
-                <input type="radio" name="call" ref={register} />
+                <input
+                  type="radio"
+                  name="preference"
+                  value="Call"
+                  ref={register}
+                />
                 Call
               </label>
 
               <label>
-                <input type="radio" name="e_mail" ref={register} />
+                <input
+                  type="radio"
+                  name="preference"
+                  value="Email"
+                  ref={register}
+                />
                 Email
               </label>
 
               <label>
-                <input type="checkbox" name="either" ref={register} />
+                <input
+                  type="radio"
+                  name="preference"
+                  value="Either"
+                  ref={register}
+                />
                 Either
               </label>
             </Box>
@@ -181,7 +211,7 @@ const ContactForm: React.FC = () => {
               <label sx={{ fontWeight: 'bold', mb: 1, display: 'block' }}>
                 Tell us a little bit about your project.
               </label>
-              <input
+              <textarea
                 sx={{
                   background: 'rgba(20, 22, 51, 0.1)',
                   height: '100px',
@@ -190,13 +220,27 @@ const ContactForm: React.FC = () => {
                   border: 'none',
                   boxShadow: '0px 0px 10px 0px rgba(20, 22, 51, 0.1)',
                   display: 'block',
+                  p: '15px',
+                  fontSize: '16px',
                 }}
-                type="text"
                 name="text"
                 ref={register}
               />
             </Box>
-            <span></span>
+            <span />
+            {(errors.fullName || errors.email) && (
+              <span
+                style={{
+                  color: 'red',
+                  position: 'absolute',
+                  bottom: '-70px',
+                  fontSize: '15px',
+                }}
+              >
+                Name and email are required, we promise not to spam 🙏🏼
+              </span>
+            )}
+            {/*<span></span>*/}
             <Box
               sx={{
                 width: '150%',

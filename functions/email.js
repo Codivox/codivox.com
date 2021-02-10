@@ -11,9 +11,7 @@ app.post('/.netlify/functions/email', async (req, res, next) => {
     email,
     fullName,
     phoneNumber,
-    call,
-    e_mail,
-    either,
+    preference,
     text,
   } = JSON.parse(req.body);
   try {
@@ -28,9 +26,7 @@ app.post('/.netlify/functions/email', async (req, res, next) => {
             ${
               phoneNumber ? ':iphone: ' + phoneNumber : ''
             } and :email: ${email} \n
-            would prefer contact via ${
-              !either && call ? ':iphone:' : ':email:'
-            } \n
+            would prefer contact via ${preference} \n
             and is interested in : \n
             *${text}*`,
           },
