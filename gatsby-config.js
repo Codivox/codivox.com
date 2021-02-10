@@ -46,7 +46,7 @@ module.exports = {
         preset: '@theme-ui/preset-tailwind',
       },
     },
-		{
+    {
       resolve: `gatsby-plugin-webfonts`,
       options: {
         fonts: {
@@ -55,8 +55,8 @@ module.exports = {
               family: 'Josefin Sans',
               variants: ['700'],
               fontDisplay: 'block',
-						},
-						{
+            },
+            {
               family: 'Lato',
               variants: ['400', '700'],
             },

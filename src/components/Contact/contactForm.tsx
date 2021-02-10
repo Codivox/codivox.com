@@ -3,8 +3,8 @@ import { Box, Flex, Heading, jsx } from 'theme-ui';
 import { Link } from 'gatsby';
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
 
 import Man from '../../images/man';
 import Conplus from '../../images/conplus';
@@ -12,7 +12,7 @@ import Clock from '../../images/clock';
 
 const ContactForm: React.FC = () => {
   const { register, handleSubmit, watch, errors } = useForm();
-  const MySwal = withReactContent(Swal)
+  const MySwal = withReactContent(Swal);
 
   const onSubmit = (data: any) => {
     // console.log(data);
@@ -33,17 +33,16 @@ const ContactForm: React.FC = () => {
             icon: 'success',
             title: response.message,
             showConfirmButton: false,
-            timer: 1500
-          })
-        }
-        else {
+            timer: 1500,
+          });
+        } else {
           MySwal.fire({
             icon: 'error',
             title: 'Oops...',
             text: 'Something went wrong!',
             showCloseButton: true,
-            footer: `Reach us at &nbsp <a href="mailto:hello@codivox.com">hello@codivox.com</a>`
-          })
+            footer: `Reach us at &nbsp <a href="mailto:hello@codivox.com">hello@codivox.com</a>`,
+          });
         }
       })
       .catch((e) => {
@@ -54,8 +53,8 @@ const ContactForm: React.FC = () => {
           text: 'Something went wrong!',
           showCloseButton: true,
           showConfirmButton: false,
-          footer: `Reach us at &nbsp <a href="mailto:hello@codivox.com">hello@codivox.com</a>`
-        })
+          footer: `Reach us at &nbsp <a href="mailto:hello@codivox.com">hello@codivox.com</a>`,
+        });
       });
   };
 
