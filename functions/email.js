@@ -15,7 +15,8 @@ app.post('/.netlify/functions/email', async (req, res, next) => {
     text,
   } = JSON.parse(req.body);
   try {
-    await axios.post(process.env.GATSBY_SLACK_URL, {
+    console.log('try');
+    await axios.post('https://hooks.slack.com/services/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', {
       text: 'New Message',
       blocks: [
         {
@@ -35,11 +36,11 @@ app.post('/.netlify/functions/email', async (req, res, next) => {
     });
     return res.status(201).json({
       success: true,
-      message: 'Thanks for contacting us, you will be hearing from us soon.',
+      message: 'Message sent successfully',
     });
   } catch (err) {
     res.status(500).json({
-      message: 'There have been an error. Please try again later.',
+      message: 'Something went wrong! Please try again.',
     });
   }
 });

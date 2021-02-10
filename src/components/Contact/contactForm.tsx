@@ -36,19 +36,20 @@ const ContactForm: React.FC = () => {
     })
       .then((result) => result.json())
       .then((response) => {
-        console.log(response.status);
-        if (response.status === 200 || response.status === 201) {
+        if (response.success) {
           MySwal.fire({
             icon: 'success',
-            title: response.message,
+            title: 'Awesome 🎉',
+            text: response.message,
             showConfirmButton: false,
-            timer: 1500,
+            showCloseButton: true,
           });
         } else {
           MySwal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Something went wrong!',
+            text: response.message,
+            showConfirmButton: false,
             showCloseButton: true,
             footer: `Reach us at &nbsp <a href="mailto:hello@codivox.com">hello@codivox.com</a>`,
           });
