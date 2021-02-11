@@ -18,13 +18,12 @@ const schema = yup.object().shape({
 });
 
 const ContactForm: React.FC = () => {
-  const { register, handleSubmit, watch, errors } = useForm({
+  const { register, handleSubmit, reset, errors } = useForm({
     resolver: yupResolver(schema),
   });
   const MySwal = withReactContent(Swal);
 
   const onSubmit = (data: any) => {
-    // console.log(data);
     fetch('/.netlify/functions/email', {
       method: 'POST', // *GET, POST, PUT, DELETE, etc.
       mode: 'no-cors', // no-cors, *cors, same-origin
@@ -44,6 +43,7 @@ const ContactForm: React.FC = () => {
             showConfirmButton: false,
             showCloseButton: true,
           });
+          reset();
         } else {
           MySwal.fire({
             icon: 'error',
@@ -243,7 +243,6 @@ const ContactForm: React.FC = () => {
                 Name and valid email are required, we promise not to spam 🙏🏼
               </span>
             )}
-            {/*<span></span>*/}
             <Box
               sx={{
                 width: '150%',
