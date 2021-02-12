@@ -80,7 +80,7 @@ const ContactForm: React.FC = () => {
           maxWidth: 1110,
           padding: `0 1.0875rem 1.45rem`,
           display: 'grid',
-          gridTemplateColumns: ['2fr 1.1fr'],
+          gridTemplateColumns: ['1fr', '1fr', '1fr', '2fr 1.1fr'],
           gridTemplateRows: '1fr',
           gap: 4,
           pt: 70,
@@ -119,7 +119,7 @@ const ContactForm: React.FC = () => {
                   sx={{
                     background: 'rgba(20, 22, 51, 0.1)',
                     height: '50px',
-                    width: '90%',
+                    width: ['100%', '90%', '90%', '90%'],
                     borderRadius: '5px',
                     border: 'none',
                     boxShadow: '0px 0px 10px 0px rgba(20, 22, 51, 0.1)',
@@ -140,7 +140,7 @@ const ContactForm: React.FC = () => {
                   sx={{
                     background: 'rgba(20, 22, 51, 0.1)',
                     height: '50px',
-                    width: '90%',
+                    width: ['100%', '90%', '90%', '90%'],
                     borderRadius: '5px',
                     border: 'none',
                     boxShadow: '0px 0px 10px 0px rgba(20, 22, 51, 0.1)',
@@ -160,7 +160,7 @@ const ContactForm: React.FC = () => {
                   sx={{
                     background: 'rgba(20, 22, 51, 0.1)',
                     height: '50px',
-                    width: '90%',
+                    width: ['100%', '90%', '90%', '90%'],
                     borderRadius: '5px',
                     border: 'none',
                     boxShadow: '0px 0px 10px 0px rgba(20, 22, 51, 0.1)',
@@ -219,7 +219,7 @@ const ContactForm: React.FC = () => {
                   sx={{
                     background: 'rgba(20, 22, 51, 0.1)',
                     height: '100px',
-                    width: '190%',
+                    width: ['100%', '190%', '190%', '190%'],
                     borderRadius: '5px',
                     border: 'none',
                     boxShadow: '0px 0px 10px 0px rgba(20, 22, 51, 0.1)',
@@ -245,7 +245,7 @@ const ContactForm: React.FC = () => {
             )}
             <Box
               sx={{
-                width: '150%',
+                // width: '150%',
                 mt: '10px',
                 mb: '100px',
                 display: 'flex',

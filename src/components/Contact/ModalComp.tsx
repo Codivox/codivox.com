@@ -33,11 +33,12 @@ const ModalComp: React.FC = () => {
       <div
         sx={{
           margin: '0 auto',
+          width: '1110px',
         }}
       >
         <Box
           sx={{
-            width: 1110,
+            width: '100%',
             display: 'grid',
             gridTemplateColumns: ['1fr 1fr'],
             gridTemplateRows: ['1fr'],
@@ -150,7 +151,7 @@ const ModalComp: React.FC = () => {
             sx={{
               display: 'grid',
               gridTemplateColumns: ['1fr 1fr'],
-              gridTtemplateRrows: ['1fr'],
+              // gridTtemplateRrows: ['1fr'],
             }}
           >
             <div>
