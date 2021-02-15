@@ -8,11 +8,18 @@ import Warning from '../../images/warning';
 import Union from '../../images/union';
 import Cross from '../../images/cross';
 import Search from '../../images/search';
+import { Link } from 'gatsby';
 
-// Modal.setAppElement('#root');
+Modal.setAppElement('#___gatsby');
 
 const ModalComp: React.FC = () => {
   const [modalIsOpen, setIsOpen] = React.useState(false);
+
+  React.useEffect(() => {
+    modalIsOpen && (document.body.style.overflow = 'hidden');
+    !modalIsOpen && (document.body.style.overflow = 'unset');
+  }, [modalIsOpen]);
+
   function openModal() {
     setIsOpen(true);
   }
@@ -27,7 +34,7 @@ const ModalComp: React.FC = () => {
         backgroundColor: '#6670FD',
         height: '50px',
         alignItems: 'center',
-        display: 'flex',
+        display: ['none', 'none', 'flex'],
       }}
     >
       <div
@@ -40,7 +47,7 @@ const ModalComp: React.FC = () => {
           sx={{
             width: '100%',
             display: 'grid',
-            gridTemplateColumns: ['1fr 1fr'],
+            gridTemplateColumns: ['3fr 2fr'],
             gridTemplateRows: ['1fr'],
             px: 3,
           }}
@@ -58,6 +65,7 @@ const ModalComp: React.FC = () => {
             <p
               sx={{
                 paddingLeft: '10px',
+                fontSize: ['12px', '12px', '15px'],
               }}
             >
               Hey there, before you decide to contact us, see if we match.
@@ -79,7 +87,7 @@ const ModalComp: React.FC = () => {
                 color: '#fff',
                 fontWeight: 'bold',
                 textDecoration: 'underline',
-                fontSize: '16px',
+                fontSize: '15px',
               }}
               onClick={openModal}
             >
@@ -93,14 +101,20 @@ const ModalComp: React.FC = () => {
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
-        contentLabel="Example Modal"
+        contentLabel="See if we match Modal"
         sx={{
           background: '#fff',
-          height: '508px',
-          width: '714px',
-          margin: '150px auto 0',
+          maxHeight: '508px',
+          maxWidth: '714px',
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          right: 'auto',
+          bottom: 'auto',
+          marginRight: '-50%',
+          transform: 'translate(-50%, -50%)',
           borderRadius: '10px',
-          px: 32,
+          p: '20px',
         }}
       >
         <button
@@ -151,7 +165,6 @@ const ModalComp: React.FC = () => {
             sx={{
               display: 'grid',
               gridTemplateColumns: ['1fr 1fr'],
-              // gridTtemplateRrows: ['1fr'],
             }}
           >
             <div>
@@ -198,7 +211,7 @@ const ModalComp: React.FC = () => {
                 <li>Non communicative approach</li>
                 <li>Getting things done by cutting corners</li>
                 <li>Doing things with low budget and a hurry</li>
-                <li>Not valuing our time and expertise </li>
+                <li>Requiring unrealistic milestones</li>
               </ul>
             </div>
           </Box>
@@ -210,16 +223,19 @@ const ModalComp: React.FC = () => {
             }}
           >
             Our goal is to be proud of products we build for our clients. If you
-            think we are a good match, you can:
+            think we are a good match, Let's talk ⚡️
           </p>
 
           <Flex
             sx={{
-              display: 'table',
+              justifyContent: 'center',
               margin: '0 auto',
             }}
           >
-            <button
+            <a
+              href="https://api.whatsapp.com/send?phone=923091313666"
+              target="_blank"
+              rel="noopener noreferrer"
               sx={{
                 variant: 'buttons.outlined',
                 background: '#fff',
@@ -232,9 +248,10 @@ const ModalComp: React.FC = () => {
                 fontSize: '1rem',
               }}
             >
-              Contact Us
-            </button>
-            <button
+              Let's talk ⚡️
+            </a>
+            <Link
+              to={'/#work-process'}
               sx={{
                 variant: 'buttons.prime',
                 background: ['#6670FD'],
@@ -245,7 +262,7 @@ const ModalComp: React.FC = () => {
               }}
             >
               How we work
-            </button>
+            </Link>
           </Flex>
         </div>
       </Modal>

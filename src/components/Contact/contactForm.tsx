@@ -83,7 +83,7 @@ const ContactForm: React.FC = () => {
           gridTemplateColumns: ['1fr', '1fr', '1fr', '2fr 1.1fr'],
           gridTemplateRows: '1fr',
           gap: 4,
-          pt: 70,
+          pt: 50,
         }}
       >
         <div>
@@ -145,6 +145,7 @@ const ContactForm: React.FC = () => {
                     border: 'none',
                     boxShadow: '0px 0px 10px 0px rgba(20, 22, 51, 0.1)',
                     display: 'block',
+                    mb: '20px',
                     px: '15px',
                     fontSize: '16px',
                   }}
@@ -173,7 +174,7 @@ const ContactForm: React.FC = () => {
                   ref={register}
                 />
               </Box>
-              <Box>
+              <Box sx={{ pb: '20px' }}>
                 <label sx={{ fontWeight: 'bold', mb: 15, display: 'block' }}>
                   Do you prefer we call or email you?
                 </label>
@@ -247,7 +248,7 @@ const ContactForm: React.FC = () => {
               sx={{
                 // width: '150%',
                 mt: '10px',
-                mb: '100px',
+                mb: '60px',
                 display: 'flex',
                 alignItems: 'center',
               }}
@@ -255,7 +256,7 @@ const ContactForm: React.FC = () => {
               <input
                 type="submit"
                 value="Send Message"
-                sx={{ variant: 'buttons.prime', width: ['100%', 210] }}
+                sx={{ variant: 'buttons.prime', width: ['50%', 210] }}
               />
               <Link
                 to="/privacy-policy"
@@ -271,6 +272,9 @@ const ContactForm: React.FC = () => {
           <ul
             sx={{
               textAlign: 'center',
+              padding: 0,
+              maxWidth: '320px',
+              margin: '0 auto',
               '& > *': {
                 listStyle: 'none',
                 lineHeight: 0.5,
