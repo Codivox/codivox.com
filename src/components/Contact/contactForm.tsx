@@ -18,13 +18,12 @@ const schema = yup.object().shape({
 });
 
 const ContactForm: React.FC = () => {
-  const { register, handleSubmit, watch, errors } = useForm({
+  const { register, handleSubmit, reset, errors } = useForm({
     resolver: yupResolver(schema),
   });
   const MySwal = withReactContent(Swal);
 
   const onSubmit = (data: any) => {
-    // console.log(data);
     fetch('/.netlify/functions/email', {
       method: 'POST', // *GET, POST, PUT, DELETE, etc.
       mode: 'no-cors', // no-cors, *cors, same-origin
@@ -44,6 +43,7 @@ const ContactForm: React.FC = () => {
             showConfirmButton: false,
             showCloseButton: true,
           });
+          reset();
         } else {
           MySwal.fire({
             icon: 'error',
@@ -80,10 +80,10 @@ const ContactForm: React.FC = () => {
           maxWidth: 1110,
           padding: `0 1.0875rem 1.45rem`,
           display: 'grid',
-          gridTemplateColumns: ['2fr 1.1fr'],
+          gridTemplateColumns: ['1fr', '1fr', '1fr', '2fr 1.1fr'],
           gridTemplateRows: '1fr',
           gap: 4,
-          pt: 70,
+          pt: 50,
         }}
       >
         <div>
@@ -119,7 +119,7 @@ const ContactForm: React.FC = () => {
                   sx={{
                     background: 'rgba(20, 22, 51, 0.1)',
                     height: '50px',
-                    width: '90%',
+                    width: ['100%', '90%', '90%', '90%'],
                     borderRadius: '5px',
                     border: 'none',
                     boxShadow: '0px 0px 10px 0px rgba(20, 22, 51, 0.1)',
@@ -140,11 +140,12 @@ const ContactForm: React.FC = () => {
                   sx={{
                     background: 'rgba(20, 22, 51, 0.1)',
                     height: '50px',
-                    width: '90%',
+                    width: ['100%', '90%', '90%', '90%'],
                     borderRadius: '5px',
                     border: 'none',
                     boxShadow: '0px 0px 10px 0px rgba(20, 22, 51, 0.1)',
                     display: 'block',
+                    mb: '20px',
                     px: '15px',
                     fontSize: '16px',
                   }}
@@ -160,7 +161,7 @@ const ContactForm: React.FC = () => {
                   sx={{
                     background: 'rgba(20, 22, 51, 0.1)',
                     height: '50px',
-                    width: '90%',
+                    width: ['100%', '90%', '90%', '90%'],
                     borderRadius: '5px',
                     border: 'none',
                     boxShadow: '0px 0px 10px 0px rgba(20, 22, 51, 0.1)',
@@ -173,7 +174,7 @@ const ContactForm: React.FC = () => {
                   ref={register}
                 />
               </Box>
-              <Box>
+              <Box sx={{ pb: '20px' }}>
                 <label sx={{ fontWeight: 'bold', mb: 15, display: 'block' }}>
                   Do you prefer we call or email you?
                 </label>
@@ -219,7 +220,7 @@ const ContactForm: React.FC = () => {
                   sx={{
                     background: 'rgba(20, 22, 51, 0.1)',
                     height: '100px',
-                    width: '190%',
+                    width: ['100%', '190%', '190%', '190%'],
                     borderRadius: '5px',
                     border: 'none',
                     boxShadow: '0px 0px 10px 0px rgba(20, 22, 51, 0.1)',
@@ -243,12 +244,11 @@ const ContactForm: React.FC = () => {
                 Name and valid email are required, we promise not to spam 🙏🏼
               </span>
             )}
-            {/*<span></span>*/}
             <Box
               sx={{
-                width: '150%',
+                // width: '150%',
                 mt: '10px',
-                mb: '100px',
+                mb: '60px',
                 display: 'flex',
                 alignItems: 'center',
               }}
@@ -256,7 +256,7 @@ const ContactForm: React.FC = () => {
               <input
                 type="submit"
                 value="Send Message"
-                sx={{ variant: 'buttons.prime', width: ['100%', 210] }}
+                sx={{ variant: 'buttons.prime', width: ['50%', 210] }}
               />
               <Link
                 to="/privacy-policy"
@@ -272,6 +272,9 @@ const ContactForm: React.FC = () => {
           <ul
             sx={{
               textAlign: 'center',
+              padding: 0,
+              maxWidth: '320px',
+              margin: '0 auto',
               '& > *': {
                 listStyle: 'none',
                 lineHeight: 0.5,

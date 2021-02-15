@@ -1,10 +1,10 @@
 import React from 'react';
 
-function ErrorIlustration(
+function ErrorIllustration(
   props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>,
 ) {
   return (
-    <svg width={756} height={335} viewBox="0 0 756 335" fill="none" {...props}>
+    <svg width={500} height={235} viewBox="0 0 756 335" fill="none" {...props}>
       <path
         d="M407.045 256.486c45.076 0 81.617-4.94 81.617-11.034 0-6.093-36.541-11.033-81.617-11.033-45.076 0-81.617 4.94-81.617 11.033 0 6.094 36.541 11.034 81.617 11.034zM565.389 310.341c45.076 0 81.617-4.94 81.617-11.033 0-6.094-36.541-11.034-81.617-11.034-45.076 0-81.618 4.94-81.618 11.034 0 6.093 36.542 11.033 81.618 11.033z"
         fill="#E3E5FC"
@@ -93,4 +93,4 @@ function ErrorIlustration(
   );
 }
 
-export default ErrorIlustration;
+export default ErrorIllustration;
