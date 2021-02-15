@@ -6,12 +6,19 @@ import PFiveDots from './../images/PFiveDots';
 
 const PrivacyPolicy: React.FC = () => {
   return (
-    <React.Fragment>
+    <Box
+      sx={{
+        maxWidth: 1110,
+        margin: `0 auto`,
+        padding: `0 1.0875rem 1.45rem`,
+      }}
+    >
       <SEO title="Privacy Policy" />
       <div>
         <Box
           sx={{
             position: 'absolute',
+            display: ['none', 'none', 'none', 'block'],
           }}
         >
           <PFiveDots />
@@ -19,10 +26,12 @@ const PrivacyPolicy: React.FC = () => {
         <p
           as="h6"
           sx={{
-            width: 206,
+            maxWidth: 210,
             mx: 'auto',
             color: 'rgba(20, 22, 51, 0.85)',
             marginTop: 50,
+            textAlign: 'center',
+            fontSize: '14px',
           }}
         >
           Effective Date​:  Jan 1st, 2020
@@ -31,8 +40,9 @@ const PrivacyPolicy: React.FC = () => {
           sx={{
             fontFamily: 'Josefin Sans',
             fontSize: 36,
-            width: 238,
+            maxWidth: 240,
             mx: 'auto',
+            my: 0,
             color: 'heading',
           }}
         >
@@ -40,9 +50,11 @@ const PrivacyPolicy: React.FC = () => {
         </h2>
         <p
           sx={{
-            width: 658,
-            fontSize: 18,
+            maxWidth: 660,
+            fontSize: 16,
             mx: 'auto',
+            my: '0',
+            textAlign: 'center',
             color: 'heading',
           }}
         >
@@ -55,15 +67,14 @@ const PrivacyPolicy: React.FC = () => {
       </div>
       <div
         sx={{
-          marginTop: 71,
-          padding: 15,
+          marginTop: 30,
+          padding: '25px 50px',
           background: 'rgba(244, 245, 255, 0.5)',
         }}
       >
         <h2
           sx={{
             fontFamily: 'Josefin Sans',
-            width: 371,
             color: 'heading',
           }}
         >
@@ -121,39 +132,36 @@ const PrivacyPolicy: React.FC = () => {
         <h2
           sx={{
             fontFamily: 'Josefin Sans',
-            width: 371,
             color: 'heading',
           }}
         >
           How do we use this information?
         </h2>
-        <p>
-          We may use the information we collect on this Site for a number of
-          purposes, including, but not limited to:
-          <ul sx={{ lineHeight: 4 }}>
-            <li>allowing you to sign up or set up a user account;</li>
-            <li>
-              providing you with our products and services, or information you
-              request;
-            </li>
-            <li>customizing your experience when using the Site;</li>
-            <li>marketing and advertising our products and services;</li>
-            <li>
-              improving the Site and the services we provide, such as by using
-              analytics and better tailoring our content to our users’ needs and
-              preferences;
-            </li>
-            <li>
-              generating and analyzing statistics about your use of the Site;
-            </li>
-            <li>
-              detecting, preventing, and responding to fraud, intellectual
-              property infringement, violations of our Online Privacy Policy or
-              Terms of Use, violations of law, or other misuse of the Site; and
-            </li>
-            <li>supporting our business operations.</li>
-          </ul>
-        </p>
+        We may use the information we collect on this Site for a number of
+        purposes, including, but not limited to:
+        <ul sx={{ lineHeight: 2 }}>
+          <li>allowing you to sign up or set up a user account;</li>
+          <li>
+            providing you with our products and services, or information you
+            request;
+          </li>
+          <li>customizing your experience when using the Site;</li>
+          <li>marketing and advertising our products and services;</li>
+          <li>
+            improving the Site and the services we provide, such as by using
+            analytics and better tailoring our content to our users’ needs and
+            preferences;
+          </li>
+          <li>
+            generating and analyzing statistics about your use of the Site;
+          </li>
+          <li>
+            detecting, preventing, and responding to fraud, intellectual
+            property infringement, violations of our Online Privacy Policy or
+            Terms of Use, violations of law, or other misuse of the Site; and
+          </li>
+          <li>supporting our business operations.</li>
+        </ul>
         <p>
           {' '}
           We also may combine or aggregate any of the information we collect
@@ -162,38 +170,35 @@ const PrivacyPolicy: React.FC = () => {
         <p>
           Under what circumstances do we disclose the information we collect?
         </p>
-        <p>
-          We may disclose the information we collect from you through the Site:
-          <ul sx={{ lineHeight: 4 }}>
-            <li>
-              to service providers who work on our behalf and who have agreed to
-              use the information solely in furtherance of our operations;
-            </li>
-            <li>to our customers;</li>
-            <li>
-              as required by law, such as to comply with a subpoena or other
-              legal process, or to comply with government reporting obligations;
-            </li>
-            <li>
-              when we believe in good faith that disclosure is necessary (a) to
-              protect our rights, the integrity of the Site, or (b) to detect,
-              prevent, or respond to fraud, intellectual property infringement,
-              violations of our Online Privacy Policy or Terms of Use,
-              violations of law, or other misuse of the Site; and
-            </li>
-            <li>
-              to affiliates, service providers, advisors, and other third
-              parties to the extent reasonably necessary to proceed with the
-              negotiation or completion of a merger, acquisition, or sale of all
-              or a portion of our assets (including in the event of are
-              organization, dissolution, or liquidation).
-            </li>
-          </ul>
-        </p>
+        We may disclose the information we collect from you through the Site:
+        <ul sx={{ lineHeight: 2 }}>
+          <li>
+            to service providers who work on our behalf and who have agreed to
+            use the information solely in furtherance of our operations;
+          </li>
+          <li>to our customers;</li>
+          <li>
+            as required by law, such as to comply with a subpoena or other legal
+            process, or to comply with government reporting obligations;
+          </li>
+          <li>
+            when we believe in good faith that disclosure is necessary (a) to
+            protect our rights, the integrity of the Site, or (b) to detect,
+            prevent, or respond to fraud, intellectual property infringement,
+            violations of our Online Privacy Policy or Terms of Use, violations
+            of law, or other misuse of the Site; and
+          </li>
+          <li>
+            to affiliates, service providers, advisors, and other third parties
+            to the extent reasonably necessary to proceed with the negotiation
+            or completion of a merger, acquisition, or sale of all or a portion
+            of our assets (including in the event of are organization,
+            dissolution, or liquidation).
+          </li>
+        </ul>
         <h2
           sx={{
             fontFamily: 'Josefin Sans',
-            width: 381,
             color: 'heading',
           }}
         >
@@ -211,7 +216,6 @@ const PrivacyPolicy: React.FC = () => {
         <h2
           sx={{
             fontFamily: 'Josefin Sans',
-            width: 254,
             color: 'heading',
           }}
         >
@@ -227,7 +231,6 @@ const PrivacyPolicy: React.FC = () => {
         <h2
           sx={{
             fontFamily: 'Josefin Sans',
-            width: 429,
             color: 'heading',
           }}
         >
@@ -243,7 +246,6 @@ const PrivacyPolicy: React.FC = () => {
         <h2
           sx={{
             fontFamily: 'Josefin Sans',
-            width: 123,
             color: 'heading',
           }}
         >
@@ -252,10 +254,10 @@ const PrivacyPolicy: React.FC = () => {
         <p>
           If you have any questions about this Online Privacy Policy or our use
           of your personal information collected through the Site, please
-          contact us ​hello@codivox.com
+          contact us <a href="mailto:hello@codivox.com">hello@codivox.com</a>
         </p>
       </div>
-    </React.Fragment>
+    </Box>
   );
 };
 
