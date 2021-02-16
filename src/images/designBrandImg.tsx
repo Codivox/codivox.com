@@ -2,7 +2,7 @@ import * as React from 'react';
 
 function DesignBrandImg(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <svg width={437} height={299} viewBox="0 0 437 299" fill="none" {...props}>
+    <svg width={250} height={250} viewBox="0 0 437 299" fill="none" {...props}>
       <path
         d="M422.872 227.506H147.947c-7.42 0-13.49-6.07-13.49-13.49V13.49c0-7.42 6.07-13.49 13.49-13.49h274.925c7.42 0 13.49 6.07 13.49 13.49v200.526c.003 7.417-6.07 13.49-13.49 13.49z"
         fill="#A7ADFF"

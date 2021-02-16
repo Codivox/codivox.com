@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Box, Flex } from 'theme-ui';
+import { Box, jsx } from 'theme-ui';
 import React from 'react';
 import SEO from '../components/seo';
 import PFiveDots from './../images/PFiveDots';
@@ -24,7 +24,6 @@ const PrivacyPolicy: React.FC = () => {
           <PFiveDots />
         </Box>
         <p
-          as="h6"
           sx={{
             maxWidth: 210,
             mx: 'auto',

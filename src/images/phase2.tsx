@@ -1,8 +1,17 @@
-import * as React from 'react';
+import React from 'react';
 
-function Phase2(props: React.SVGProps<SVGSVGElement>) {
+function Phase2(
+  props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>,
+) {
   return (
-    <svg width={176} height={176} viewBox="0 0 176 176" fill="none" {...props}>
+    <svg
+      width={176}
+      height={176}
+      viewBox="0 0 176 176"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
       <path
         d="M49.06 62.69c7.56-6.224 31.534-30.533 55.537-20.597 22.998 12.023 33.494 55.076 21.301 78.399-12.193 23.322-39.752 22.539-62.75 10.516-23-12.023-40.286-46.75-14.088-68.318z"
         fill="#5A54FF"
@@ -13,7 +22,7 @@ function Phase2(props: React.SVGProps<SVGSVGElement>) {
         fill="#5A54FF"
         fillOpacity={0.2}
       />
-      <g clipPath="url(#prefix__clip0)">
+      <g clipPath="url(#prefix__clip10)">
         <path
           d="M82.734 80.64l-6.438-6.437 1.028-1.028-6.686-1.537 1.537 6.687 1.028-1.028 6.352 6.352 3.179-3.009zM94.4 83.722l6.425-6.425 1.028 1.028 1.537-6.687-6.687 1.537 1.028 1.028-6.425 6.425 3.093 3.094zM91.585 95.678l6.146 6.146-1.028 1.029 6.687 1.536-1.537-6.686-1.028 1.028-6.131-6.13-3.109 3.077zM79.332 92.601l-6.13 6.13-1.027-1.028-1.537 6.686 6.686-1.537-1.028-1.028 6.14-6.139-3.104-3.084z"
           fill="#FDC510"
@@ -36,7 +45,7 @@ function Phase2(props: React.SVGProps<SVGSVGElement>) {
         />
       </g>
       <defs>
-        <clipPath id="prefix__clip0">
+        <clipPath id="prefix__clip10">
           <path fill="#fff" transform="translate(59 60)" d="M0 0h56v56H0z" />
         </clipPath>
       </defs>
