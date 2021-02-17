@@ -26,7 +26,6 @@ const Phase: React.FC = () => {
           gridTemplateRows: '1fr',
           columnGap: '30px',
           minHeight: '556px',
-          pt: 56,
         }}
       >
         <Flex
@@ -48,7 +47,7 @@ const Phase: React.FC = () => {
           <Phase1 />
           <Heading
             sx={{
-              fontSize: '28px',
+              fontSize: '22px',
               mt: '20px',
               opacity: 0.8,
               lineHeight: '140%',
@@ -86,13 +85,19 @@ const Phase: React.FC = () => {
           >
             Phase 2
           </p>
-          <Phase2 />
+          <span
+            sx={{
+              mt: '-18px',
+            }}
+          >
+            <Phase2 />
+          </span>
           <Heading
             sx={{
-              fontSize: '28px',
-              mt: '20px',
+              fontSize: '22px',
               opacity: 0.8,
               lineHeight: '140%',
+              mt: '-5px',
             }}
           >
             Rapid, iterative prototyping
@@ -129,7 +134,7 @@ const Phase: React.FC = () => {
           <Phase3 />
           <Heading
             sx={{
-              fontSize: '28px',
+              fontSize: '22px',
               opacity: 0.8,
               lineHeight: '140%',
               mt: '20px',

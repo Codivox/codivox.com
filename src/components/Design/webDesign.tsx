@@ -7,31 +7,26 @@ const WebDesign: React.FC = () => {
   const brandTitle =
     'We put smart efforts to research and planning to execute amazing experience';
   const brandSubtitle =
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In imperdiet dui non ex maximus varius. Fusce interdum felis at aliquet maximus. Vivamus tempor mauris ut molestie cursusm a.';
+    'We deliver quality web apps design based on measurable results to get higher conversions.';
   return (
     <Box
       sx={{
         m: '0 auto',
         maxWidth: 1110,
         padding: `0 1.0875rem 1.45rem`,
-        minHeight: '685px',
       }}
     >
       <Box sx={{ textAlign: 'center', pt: '77px' }}>
         <Heading
           sx={{
-            fontSize: ['26px', '36px'],
-            width: ['100%', '620px'],
+            fontSize: ['26px', '32px'],
+            width: ['100%', '460px'],
             m: '0 auto',
             fontWeight: 600,
           }}
         >
-          Web design services that help you to boost more revenue
+          Web design that helps you boost more revenue 💰
         </Heading>
-        <p sx={{ opacity: '0.85', width: ['100%', '446px'], m: '0 auto' }}>
-          We deliver quality web apps design based on measurable results to get
-          higher conversions.
-        </p>
       </Box>
 
       <Box
@@ -44,30 +39,40 @@ const WebDesign: React.FC = () => {
           mt: '25px',
         }}
       >
-        <WebDesignImg
+        <Flex
           sx={{
-            width: '100%',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
-        />
+        >
+          <WebDesignImg
+            sx={{
+              gridRow: [1, 'unset'],
+              gridColumn: [1, 'unset'],
+              maxWidth: '250px',
+            }}
+          />
+        </Flex>
         <Flex
           sx={{
             display: 'grid',
             gridTemplateRows: 'auto auto auto',
-            height: ['calc( 300px )', 'calc( 400px )'],
+            // height: ['calc( 300px )', 'calc( 400px )'],
             gridTemplateColumns: ['100%'],
             textAlign: ['center', 'left'],
+            flexDirection: 'column',
           }}
         >
           <Heading
             sx={{
-              fontSize: ['27px', '28px'],
-              maxWidth: '455px',
-              mt: ['10px', '100px'],
+              fontSize: ['24px', '26px'],
+              display: 'flex',
+              justifyContent: 'center',
             }}
           >
             {brandTitle}
           </Heading>
-          <p sx={{ opacity: '0.85', mt: ['10px', '-35px'] }}>{brandSubtitle}</p>
+          <p sx={{ opacity: '0.85' }}>{brandSubtitle}</p>
         </Flex>
       </Box>
     </Box>

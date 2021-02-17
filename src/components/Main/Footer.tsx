@@ -327,7 +327,10 @@ const Footer: React.FC = () => {
           mt: ['22px', '80px', '80px', '80px'],
         }}
       >
-        All rights reserved by © Codivox {new Date().getFullYear()}
+        All rights reserved by © Codivox {new Date().getFullYear()} -
+        <Link to="/privacy-policy" sx={{ color: '#6670FD', ml: '5px' }}>
+          Privacy Policy
+        </Link>
       </div>
     </footer>
   );

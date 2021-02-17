@@ -4,7 +4,7 @@ function PFiveDots(
   props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>,
 ) {
   return (
-    <svg width={210} height={210} viewBox="0 0 210 210" fill="none" {...props}>
+    <svg width={150} height={150} viewBox="0 0 210 210" fill="none" {...props}>
       <circle
         cx={152.695}
         cy={8.782}

@@ -223,7 +223,7 @@ const ModalComp: React.FC = () => {
             }}
           >
             Our goal is to be proud of products we build for our clients. If you
-            think we are a good match, Let's talk ⚡️
+            think we are a good match,
           </p>
 
           <Flex
