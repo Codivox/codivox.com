@@ -8,7 +8,7 @@ import Oval2x from '../../images/oval2x';
 const TrustedPartner: React.FC = () => {
   const brandTitle = 'We’re trusted to provide all services in our agency';
   const brandSubtitle =
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In imperdiet dui non ex maximus varius. Fusce interdum felis at aliquet maximus. Vivamus tempor mauris ut molestie cursusm a.';
+    'We’ll monitor, maintain and support your app for the life of the app.';
   return (
     <div sx={{ background: 'rgba(244, 245, 255, 0.5)', minHeight: '626px' }}>
       <Box
@@ -34,11 +34,6 @@ const TrustedPartner: React.FC = () => {
           >
             Your Trusted Partner
           </Heading>
-          <p sx={{ opacity: '0.85', width: ['100%', 464], m: '0 auto' }}>
-            We’ll monitor, maintain and support your app for the life of the
-            app.
-          </p>
-
           <Flex sx={{ position: 'absolute', display: ['none', 'block'] }}>
             <Box sx={{ position: 'relative', top: '-150px' }}>
               <span sx={{ position: 'relative', left: '747px', top: '59px' }}>

@@ -6,8 +6,7 @@ import WebDevelopmentHero from '../../images/webDevelopmentHero';
 const Hero: React.FC = () => {
   const heroTitle =
     'We craft each website to achieve clear objectives and goals.';
-  const heroSubtitle =
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In imperdiet dui non ex maximus varius. Fusce interdum felis at aliquet maximus.';
+
   return (
     <Box
       sx={{
@@ -35,9 +34,6 @@ const Hero: React.FC = () => {
         <Heading sx={{ fontSize: ['27px', '36px'], mt: ['0px', '55px'] }}>
           {heroTitle}
         </Heading>
-        <p sx={{ maxWidth: '370px', opacity: '0.85', mx: ['auto', 0] }}>
-          {heroSubtitle}
-        </p>
         <button
           sx={{ variant: 'buttons.prime', width: ['100%', 210], mt: [3, 0] }}
         >

@@ -7,7 +7,7 @@ const Idea: React.FC = () => {
   const brandTitle =
     'From high-converting landing pages to complex enterprise and e-commerce apps';
   const brandSubtitle =
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In imperdiet dui non ex maximus varius. Fusce interdum felis at aliquet maximus. Vivamus tempor mauris ut molestie cursusm a.';
+    'We provide good user experience, high performance, SEO friendly websites with modern technology.';
   return (
     <Box
       sx={{
@@ -26,12 +26,8 @@ const Idea: React.FC = () => {
             fontWeight: 600,
           }}
         >
-          Let’s turn your idea into stuning web app
+          Let’s turn your idea into stunning web app
         </Heading>
-        <p sx={{ opacity: '0.85', width: ['100%', '446px'], m: '0 auto' }}>
-          We provide good user experience, high performance, SEO friendly
-          websites with modern technology.
-        </p>
       </Box>
 
       <Box

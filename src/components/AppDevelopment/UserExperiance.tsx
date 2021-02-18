@@ -7,7 +7,7 @@ const UserExperiance: React.FC = () => {
   const brandTitle =
     'Developed by Facebook, used by big players like Uber, Instagram and Spotify.';
   const brandSubtitle =
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In imperdiet dui non ex maximus varius. Fusce interdum felis at aliquet maximus. Vivamus tempor mauris ut molestie cursusm a.';
+    'We build high quality, fast and native experience, responsive apps with our agile development process.';
   return (
     <Box
       sx={{
@@ -28,10 +28,6 @@ const UserExperiance: React.FC = () => {
         >
           Seamless user experiences for React Native apss
         </Heading>
-        <p sx={{ opacity: '0.85', width: ['100%', '446px'], m: '0 auto' }}>
-          We build high quality, fast and native experience, responsive apps
-          with our agile development process.
-        </p>
       </Box>
 
       <Box

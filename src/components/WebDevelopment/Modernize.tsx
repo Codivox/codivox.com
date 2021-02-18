@@ -9,7 +9,7 @@ import Ovalx from '../../images/Ovalx';
 const Modernize: React.FC = () => {
   const brandTitle = 'Make your users amazed with blazing fast Wordpress site';
   const brandSubtitle =
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In imperdiet dui non ex maximus varius. Fusce interdum felis at aliquet maximus. Vivamus tempor mauris ut molestie cursusm a.';
+    'We build high performance front end for headless Wordpress which will provide you good of both worlds.';
   return (
     <div sx={{ background: 'rgba(244, 245, 255, 0.5)', minHeight: '606px' }}>
       <Box
@@ -35,10 +35,6 @@ const Modernize: React.FC = () => {
           >
             Modernize your wordpress site using Gatsby
           </Heading>
-          <p sx={{ opacity: '0.85', width: ['100%', 492], m: '0 auto' }}>
-            We build high performance front end forheadless Wordpress which will
-            provide you goog of both worlds.
-          </p>
 
           <Flex sx={{ position: 'absolute', display: ['none', 'block'] }}>
             <Box sx={{ position: 'relative', top: '-150px' }}>

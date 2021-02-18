@@ -9,7 +9,7 @@ const Integration: React.FC = () => {
   const brandTitle =
     'Payment gateways, email & SMS integration, we can do it all.';
   const brandSubtitle =
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In imperdiet dui non ex maximus varius. Fusce interdum felis at aliquet maximus. Vivamus tempor mauris ut molestie cursusm a.';
+    'We deliver solid product integrations that can automate your business processes.';
   return (
     <div sx={{ background: 'rgba(244, 245, 255, 0.5)', minHeight: '626px' }}>
       <Box
@@ -35,10 +35,6 @@ const Integration: React.FC = () => {
           >
             Integrate your existing web app to external systems
           </Heading>
-          <p sx={{ opacity: '0.85', width: ['100%', 464], m: '0 auto' }}>
-            We deliver solid product integrations that can automate your
-            business processes.
-          </p>
 
           <Flex sx={{ position: 'absolute', display: ['none', 'block'] }}>
             <Box sx={{ position: 'relative', top: '-150px' }}>

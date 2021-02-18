@@ -9,7 +9,7 @@ const ReactNativ: React.FC = () => {
   const brandTitle =
     'Pay less, reach more people, get apps without compromises';
   const brandSubtitle =
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In imperdiet dui non ex maximus varius. Fusce interdum felis at aliquet maximus. Vivamus tempor mauris ut molestie cursusm a.';
+    'Maximize code reuse between platforms while keeping the UI native, cutting costs in half.';
   return (
     <div sx={{ background: 'rgba(244, 245, 255, 0.5)', minHeight: '685px' }}>
       <Box
@@ -35,10 +35,6 @@ const ReactNativ: React.FC = () => {
           >
             React Native for maximum efficiency
           </Heading>
-          <p sx={{ opacity: '0.85', width: ['100%', 492], m: '0 auto' }}>
-            Maximize code reuse between platforms while keeping the UI native,
-            cutting costs in half.
-          </p>
 
           <Flex sx={{ position: 'absolute', display: ['none', 'block'] }}>
             <Box sx={{ position: 'relative', top: '-150px' }}>
