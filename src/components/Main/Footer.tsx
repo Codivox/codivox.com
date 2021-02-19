@@ -16,15 +16,15 @@ const Footer: React.FC = () => {
   const services = [
     {
       content: 'Design',
-      link: 'design',
+      link: '/design',
     },
     {
       content: 'Web Development',
-      link: 'web-development',
+      link: '/web-development',
     },
     {
       content: 'App Development',
-      link: 'app-development',
+      link: '/app-development',
     },
     {
       content: 'Technical Consulting',

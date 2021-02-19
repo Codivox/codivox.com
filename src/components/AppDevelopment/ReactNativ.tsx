@@ -11,7 +11,7 @@ const ReactNativ: React.FC = () => {
   const brandSubtitle =
     'Maximize code reuse between platforms while keeping the UI native, cutting costs in half.';
   return (
-    <div sx={{ background: 'rgba(244, 245, 255, 0.5)', minHeight: '685px' }}>
+    <div sx={{ background: 'rgba(244, 245, 255, 0.5)', minHeight: '500px' }}>
       <Box
         sx={{
           m: '0 auto',
@@ -22,12 +22,13 @@ const ReactNativ: React.FC = () => {
         <hr
           sx={{
             border: '1px solid #A7ADFF',
+            opacity: 0.2,
           }}
         />
         <Box sx={{ textAlign: 'center', pt: '77px' }}>
           <Heading
             sx={{
-              fontSize: ['26px', '38px'],
+              fontSize: ['26px', '32px'],
               width: ['100%', 492],
               m: '0 auto',
               fontWeight: 600,
@@ -64,7 +65,7 @@ const ReactNativ: React.FC = () => {
             sx={{
               display: 'grid',
               gridTemplateRows: 'auto auto auto',
-              height: ['calc( 300px )', 'calc( 400px )'],
+              // height: ['calc( 300px )', 'calc( 400px )'],
               gridTemplateColumns: ['100%'],
               gridColumn: [1, null],
               textAlign: ['center', 'left'],
@@ -72,30 +73,35 @@ const ReactNativ: React.FC = () => {
           >
             <Heading
               sx={{
-                fontSize: ['27px', '28px'],
+                fontSize: ['24px', '26px'],
                 maxWidth: '450px',
-                mt: ['10px', '100px'],
               }}
             >
               {brandTitle}
             </Heading>
-            <p sx={{ opacity: '0.85', mt: ['10px', '-35px'] }}>
-              {brandSubtitle}
-            </p>
+            <p sx={{ opacity: '0.85' }}>{brandSubtitle}</p>
           </Flex>
-          <ReactNativImg
+          <Flex
             sx={{
-              gridRow: [1, 'unset'],
-              gridColumn: [1, 'unset'],
-              width: '100%',
+              justifyContent: 'center',
+              alignItems: 'center',
             }}
-          />
+          >
+            <ReactNativImg
+              sx={{
+                gridRow: [1, 'unset'],
+                gridColumn: [1, 'unset'],
+                maxWidth: '250px',
+              }}
+            />
+          </Flex>
         </Box>
         <hr
           sx={{
             border: '1px solid #A7ADFF',
             position: 'relative',
-            bottom: '-33px',
+            bottom: '-45px',
+            opacity: 0.2,
           }}
         />
       </Box>

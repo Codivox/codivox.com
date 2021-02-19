@@ -26,7 +26,7 @@ const UserExperiance: React.FC = () => {
             fontWeight: 600,
           }}
         >
-          Seamless user experiences for React Native apss
+          Seamless user experiences for React Native apps
         </Heading>
       </Box>
 
