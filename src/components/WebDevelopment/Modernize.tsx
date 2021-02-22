@@ -11,7 +11,7 @@ const Modernize: React.FC = () => {
   const brandSubtitle =
     'We build high performance front end for headless Wordpress which will provide you good of both worlds.';
   return (
-    <div sx={{ background: 'rgba(244, 245, 255, 0.5)', minHeight: '500px' }}>
+    <div sx={{ background: 'rgba(244, 245, 255, 0.5)' }}>
       <Box
         sx={{
           m: '0 auto',
@@ -107,7 +107,7 @@ const Modernize: React.FC = () => {
           sx={{
             border: '1px solid #A7ADFF',
             position: 'relative',
-            bottom: '-60px',
+            bottom: '-31px',
             opacity: 0.2,
           }}
         />

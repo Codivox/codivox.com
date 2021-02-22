@@ -1,8 +1,17 @@
 import * as React from 'react';
 
-function IntegrationImg(props: React.SVGProps<SVGSVGElement>) {
+function IntegrationImg(
+  props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>,
+) {
   return (
-    <svg width={363} height={194} viewBox="0 0 363 194" fill="none" {...props}>
+    <svg
+      width={363}
+      height={194}
+      viewBox="0 0 363 194"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
       <circle cx={47.5} cy={47.5} r={47.5} fill="#F4F5FF" />
       <circle
         cx={47.5}
@@ -117,7 +126,7 @@ function IntegrationImg(props: React.SVGProps<SVGSVGElement>) {
         d="M299.414 39.057l-2.161 6.315s-1.894-.992-4.216-.992c-3.404 0-3.575 2.097-3.575 2.625 0 2.884 7.656 3.99 7.656 10.745 0 5.315-3.433 8.737-8.061 8.737-5.555 0-8.395-3.394-8.395-3.394l1.487-4.826s2.92 2.462 5.383 2.462c1.61 0 2.265-1.245 2.265-2.154 0-3.762-6.28-3.93-6.28-10.112 0-5.203 3.802-10.237 11.478-10.237 2.958 0 4.419.831 4.419.831z"
         fill="#fff"
       />
-      <g clipPath="url(#prefix__clip0)" fillRule="evenodd" clipRule="evenodd">
+      <g clipPath="url(#prefix__clip10)" fillRule="evenodd" clipRule="evenodd">
         <path
           d="M39.532 101c-3.095.002-5.6 2.42-5.598 5.399-.003 2.979 2.505 5.397 5.6 5.399h5.601v-5.397c.003-2.979-2.505-5.397-5.603-5.401.002 0 .002 0 0 0zm0 14.4H24.601c-3.096.002-5.603 2.42-5.601 5.399-.005 2.979 2.503 5.397 5.599 5.401h14.933c3.096-.002 5.603-2.42 5.601-5.399.002-2.981-2.505-5.399-5.6-5.401z"
           fill="#36C5F0"
@@ -135,11 +144,11 @@ function IntegrationImg(props: React.SVGProps<SVGSVGElement>) {
           fill="#E01E5A"
         />
       </g>
-      <g clipPath="url(#prefix__clip1)" fill="#CF272D">
+      <g clipPath="url(#prefix__clip11)" fill="#CF272D">
         <path d="M132.468 147.629c-11.986 0-21.702-9.222-21.702-20.598s9.716-20.598 21.702-20.598c11.985 0 21.701 9.222 21.701 20.598s-9.716 20.598-21.701 20.598zm0-48.567c-16.275 0-29.468 12.522-29.468 27.969C103 142.478 116.193 155 132.468 155c16.274 0 29.467-12.522 29.467-27.969 0-15.447-13.193-27.97-29.467-27.97z" />
         <path d="M133.679 120.065c0-3.212 2.744-5.815 6.128-5.815s6.127 2.603 6.127 5.815-2.743 5.816-6.127 5.816-6.128-2.604-6.128-5.816zm0 13.931c0-3.211 2.744-5.815 6.128-5.815s6.127 2.604 6.127 5.815c0 3.212-2.743 5.816-6.127 5.816s-6.128-2.604-6.128-5.816zm-14.677 0c0-3.211 2.743-5.815 6.127-5.815s6.127 2.604 6.127 5.815c0 3.212-2.743 5.816-6.127 5.816s-6.127-2.604-6.127-5.816zm0-13.931c0-3.212 2.743-5.815 6.127-5.815s6.127 2.603 6.127 5.815-2.743 5.816-6.127 5.816-6.127-2.604-6.127-5.816z" />
       </g>
-      <g clipPath="url(#prefix__clip2)">
+      <g clipPath="url(#prefix__clip12)">
         <path
           d="M205.333 117.667H187V153h36.667v-35.333h-18.334z"
           fill="#9DE1F3"
@@ -154,7 +163,7 @@ function IntegrationImg(props: React.SVGProps<SVGSVGElement>) {
           fill="#239FD7"
         />
       </g>
-      <g clipPath="url(#prefix__clip3)">
+      <g clipPath="url(#prefix__clip13)">
         <path
           d="M314 124.65h-16v-14.8c0-1.021-.896-1.85-2-1.85s-2 .829-2 1.85v14.8h-16c-1.104 0-2 .829-2 1.85 0 1.021.896 1.85 2 1.85h16v14.8c0 1.021.896 1.85 2 1.85s2-.829 2-1.85v-14.8h16c1.104 0 2-.829 2-1.85 0-1.021-.896-1.85-2-1.85z"
           fill="#6670FD"
@@ -162,16 +171,16 @@ function IntegrationImg(props: React.SVGProps<SVGSVGElement>) {
         />
       </g>
       <defs>
-        <clipPath id="prefix__clip0">
+        <clipPath id="prefix__clip10">
           <path fill="#fff" transform="translate(19 101)" d="M0 0h56v54H0z" />
         </clipPath>
-        <clipPath id="prefix__clip1">
+        <clipPath id="prefix__clip11">
           <path fill="#fff" transform="translate(103 99)" d="M0 0h59v56H0z" />
         </clipPath>
-        <clipPath id="prefix__clip2">
+        <clipPath id="prefix__clip12">
           <path fill="#fff" transform="translate(187 100)" d="M0 0h55v53H0z" />
         </clipPath>
-        <clipPath id="prefix__clip3">
+        <clipPath id="prefix__clip13">
           <path fill="#fff" transform="translate(276 108)" d="M0 0h40v37H0z" />
         </clipPath>
         <filter

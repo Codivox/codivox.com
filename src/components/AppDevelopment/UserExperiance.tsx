@@ -14,19 +14,19 @@ const UserExperiance: React.FC = () => {
         m: '0 auto',
         maxWidth: 1110,
         padding: `0 1.0875rem 1.45rem`,
-        minHeight: '685px',
+        // minHeight: '685px',
       }}
     >
       <Box sx={{ textAlign: 'center', pt: '77px' }}>
         <Heading
           sx={{
-            fontSize: ['26px', '36px'],
+            fontSize: ['26px', '32px'],
             width: ['100%', '512px'],
             m: '0 auto',
             fontWeight: 600,
           }}
         >
-          Seamless user experiences for React Native apps
+          Seamless user experiences for React Native apps 🎯
         </Heading>
       </Box>
 
@@ -40,30 +40,37 @@ const UserExperiance: React.FC = () => {
           mt: '25px',
         }}
       >
-        <UserExperianceImg
+        <Flex
           sx={{
-            width: '100%',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
-        />
+        >
+          <UserExperianceImg
+            sx={{
+              width: '250px',
+            }}
+          />
+        </Flex>
         <Flex
           sx={{
             display: 'grid',
             gridTemplateRows: 'auto auto auto',
-            height: ['calc( 300px )', 'calc( 400px )'],
+            // height: ['calc( 300px )', 'calc( 400px )'],
             gridTemplateColumns: ['100%'],
             textAlign: ['center', 'left'],
           }}
         >
           <Heading
             sx={{
-              fontSize: ['27px', '28px'],
+              fontSize: ['24px', '26px'],
               maxWidth: '455px',
-              mt: ['10px', '100px'],
+              // mt: ['10px', '100px'],
             }}
           >
             {brandTitle}
           </Heading>
-          <p sx={{ opacity: '0.85', mt: ['10px', '-35px'] }}>{brandSubtitle}</p>
+          <p sx={{ opacity: '0.85' }}>{brandSubtitle}</p>
         </Flex>
       </Box>
     </Box>

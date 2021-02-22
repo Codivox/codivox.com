@@ -4,6 +4,8 @@ import React from 'react';
 import Phase1 from '../../images/phase1';
 import Phase2 from '../../images/phase2';
 import Phase3 from '../../images/phase3';
+import PhaseRocket from '../../images/phaseRocket';
+import PhaseEng from '../../images/phaseEng';
 
 const Phase: React.FC = () => {
   return (
@@ -105,7 +107,7 @@ const Phase: React.FC = () => {
             >
               Phase 2
             </p>
-            <Phase3 />
+            <PhaseEng />
             <Heading
               sx={{
                 fontSize: '28px',
@@ -147,7 +149,7 @@ const Phase: React.FC = () => {
             >
               Phase 3
             </p>
-            <Phase3 />
+            <PhaseRocket />
             <Heading
               sx={{
                 fontSize: '28px',

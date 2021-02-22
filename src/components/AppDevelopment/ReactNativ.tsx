@@ -34,7 +34,7 @@ const ReactNativ: React.FC = () => {
               fontWeight: 600,
             }}
           >
-            React Native for maximum efficiency
+            React Native for maximum efficiency 🥇
           </Heading>
 
           <Flex sx={{ position: 'absolute', display: ['none', 'block'] }}>

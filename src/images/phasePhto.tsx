@@ -13,7 +13,7 @@ function PhasePhto(props: React.SVGProps<SVGSVGElement>) {
         fill="#5A54FF"
         fillOpacity={0.2}
       />
-      <g clipPath="url(#prefix__clip0)">
+      <g clipPath="url(#prefix__clip70)">
         <path
           d="M76.582 74.378l-6.667-6.668 1.064-1.064-6.925-1.592 1.592 6.925 1.064-1.064 6.58 6.578 3.292-3.115zM88.663 77.57l6.655-6.655 1.065 1.064 1.592-6.925-6.926 1.592 1.065 1.064-6.655 6.655 3.204 3.205zM85.749 89.953l6.366 6.365-1.065 1.065 6.925 1.592-1.591-6.926-1.065 1.065-6.35-6.35-3.22 3.189zM73.059 86.766l-6.349 6.348-1.064-1.065-1.592 6.926 6.925-1.592-1.064-1.065 6.358-6.358-3.214-3.194z"
           fill="#FDC510"
@@ -36,7 +36,7 @@ function PhasePhto(props: React.SVGProps<SVGSVGElement>) {
         />
       </g>
       <defs>
-        <clipPath id="prefix__clip0">
+        <clipPath id="prefix__clip70">
           <path fill="#fff" transform="translate(52 53)" d="M0 0h58v58H0z" />
         </clipPath>
       </defs>
