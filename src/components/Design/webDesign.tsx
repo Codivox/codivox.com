@@ -57,7 +57,6 @@ const WebDesign: React.FC = () => {
           sx={{
             display: 'grid',
             gridTemplateRows: 'auto auto auto',
-            // height: ['calc( 300px )', 'calc( 400px )'],
             gridTemplateColumns: ['100%'],
             textAlign: ['center', 'left'],
             flexDirection: 'column',

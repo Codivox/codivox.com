@@ -14,7 +14,6 @@ const UserExperiance: React.FC = () => {
         m: '0 auto',
         maxWidth: 1110,
         padding: `0 1.0875rem 1.45rem`,
-        // minHeight: '685px',
       }}
     >
       <Box sx={{ textAlign: 'center', pt: '77px' }}>
@@ -56,7 +55,6 @@ const UserExperiance: React.FC = () => {
           sx={{
             display: 'grid',
             gridTemplateRows: 'auto auto auto',
-            // height: ['calc( 300px )', 'calc( 400px )'],
             gridTemplateColumns: ['100%'],
             textAlign: ['center', 'left'],
           }}
@@ -65,7 +63,6 @@ const UserExperiance: React.FC = () => {
             sx={{
               fontSize: ['24px', '26px'],
               maxWidth: '455px',
-              // mt: ['10px', '100px'],
             }}
           >
             {brandTitle}

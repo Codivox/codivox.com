@@ -71,7 +71,6 @@ const Modernize: React.FC = () => {
             sx={{
               display: 'grid',
               gridTemplateRows: 'auto auto auto',
-              // height: ['calc( 300px )', 'calc( 400px )'],
               gridTemplateColumns: ['100%'],
               gridColumn: [1, null],
               textAlign: ['center', 'left'],
@@ -81,7 +80,6 @@ const Modernize: React.FC = () => {
               sx={{
                 fontSize: ['24px', '26px'],
                 maxWidth: '450px',
-                // mt: ['10px', '100px'],
               }}
             >
               {brandTitle}

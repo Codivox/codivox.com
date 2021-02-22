@@ -63,7 +63,6 @@ const Idea: React.FC = () => {
             sx={{
               fontSize: ['24px', '26px'],
               maxWidth: '455px',
-              // mt: ['10px', '100px'],
             }}
           >
             {brandTitle}

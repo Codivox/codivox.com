@@ -2,8 +2,6 @@
 import { Box, Heading, jsx, Flex } from 'theme-ui';
 import React from 'react';
 import Phase1 from '../../images/phase1';
-import Phase2 from '../../images/phase2';
-import Phase3 from '../../images/phase3';
 import PhaseRocket from '../../images/phaseRocket';
 import PhaseEng from '../../images/phaseEng';
 

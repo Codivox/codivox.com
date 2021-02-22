@@ -67,7 +67,6 @@ const TrustedPartner: React.FC = () => {
             sx={{
               display: 'grid',
               gridTemplateRows: 'auto auto auto',
-              // height: ['calc( 300px )', 'calc( 400px )'],
               gridTemplateColumns: ['100%'],
               gridColumn: [1, null],
               textAlign: ['center', 'left'],
@@ -77,7 +76,6 @@ const TrustedPartner: React.FC = () => {
               sx={{
                 fontSize: ['24px', '26px'],
                 maxWidth: '520px',
-                // mt: ['10px', '100px'],
                 width: ['100%', 445],
               }}
             >
