@@ -8,9 +8,9 @@ import Oval2x from '../../images/oval2x';
 const TrustedPartner: React.FC = () => {
   const brandTitle = 'We’re trusted to provide all services in our agency';
   const brandSubtitle =
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In imperdiet dui non ex maximus varius. Fusce interdum felis at aliquet maximus. Vivamus tempor mauris ut molestie cursusm a.';
+    'We’ll monitor, maintain and support your app for the life of the app.';
   return (
-    <div sx={{ background: 'rgba(244, 245, 255, 0.5)', minHeight: '626px' }}>
+    <div sx={{ background: 'rgba(244, 245, 255, 0.5)' }}>
       <Box
         sx={{
           m: '0 auto',
@@ -21,24 +21,20 @@ const TrustedPartner: React.FC = () => {
         <hr
           sx={{
             border: '1px solid #A7ADFF',
+            opacity: 0.2,
           }}
         />
         <Box sx={{ textAlign: 'center', pt: '77px' }}>
           <Heading
             sx={{
-              fontSize: ['26px', '38px'],
+              fontSize: ['26px', '32px'],
               width: ['100%', 684],
               m: '0 auto',
               fontWeight: 600,
             }}
           >
-            Your Trusted Partner
+            Your Trusted Partner 🤝
           </Heading>
-          <p sx={{ opacity: '0.85', width: ['100%', 464], m: '0 auto' }}>
-            We’ll monitor, maintain and support your app for the life of the
-            app.
-          </p>
-
           <Flex sx={{ position: 'absolute', display: ['none', 'block'] }}>
             <Box sx={{ position: 'relative', top: '-150px' }}>
               <span sx={{ position: 'relative', left: '747px', top: '59px' }}>
@@ -71,7 +67,6 @@ const TrustedPartner: React.FC = () => {
             sx={{
               display: 'grid',
               gridTemplateRows: 'auto auto auto',
-              height: ['calc( 300px )', 'calc( 400px )'],
               gridTemplateColumns: ['100%'],
               gridColumn: [1, null],
               textAlign: ['center', 'left'],
@@ -79,31 +74,36 @@ const TrustedPartner: React.FC = () => {
           >
             <Heading
               sx={{
-                fontSize: ['27px', '28px'],
+                fontSize: ['24px', '26px'],
                 maxWidth: '520px',
-                mt: ['10px', '100px'],
                 width: ['100%', 445],
               }}
             >
               {brandTitle}
             </Heading>
-            <p sx={{ opacity: '0.85', mt: ['10px', '-35px'] }}>
-              {brandSubtitle}
-            </p>
+            <p sx={{ opacity: '0.85' }}>{brandSubtitle}</p>
           </Flex>
-          <TrustedPartnerImg
+          <Flex
             sx={{
-              gridRow: [1, 'unset'],
-              gridColumn: [1, 'unset'],
-              width: '100%',
+              justifyContent: 'center',
+              alignItems: 'center',
             }}
-          />
+          >
+            <TrustedPartnerImg
+              sx={{
+                gridRow: [1, 'unset'],
+                gridColumn: [1, 'unset'],
+                width: '250px',
+              }}
+            />
+          </Flex>
         </Box>
         <hr
           sx={{
             border: '1px solid #A7ADFF',
             position: 'relative',
             bottom: '-33px',
+            opacity: 0.2,
           }}
         />
       </Box>

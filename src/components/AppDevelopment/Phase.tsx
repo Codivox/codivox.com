@@ -100,7 +100,7 @@ const Phase: React.FC = () => {
                   color: '#5A54FF',
                 }}
               >
-                Phase 1
+                Phase 2
               </p>
               <Heading
                 sx={{
@@ -109,7 +109,7 @@ const Phase: React.FC = () => {
                   color: '#141633',
                 }}
               >
-                Research & Plan
+                Prototype & Design
               </Heading>
               <p
                 sx={{
@@ -119,9 +119,9 @@ const Phase: React.FC = () => {
                   mt: 0,
                 }}
               >
-                Just like building a house, we start with architecture.
-                Together, we’ll find the most effective solution to your unique
-                business challenges.
+                A clickable, interactive prototype tests assumptions. It also
+                ensures your app will be intuitive, easy to use, and meets your
+                users’ needs.
               </p>
             </div>
           </Flex>
@@ -146,7 +146,7 @@ const Phase: React.FC = () => {
                   color: '#5A54FF',
                 }}
               >
-                Phase 1
+                Phase 3
               </p>
               <Heading
                 sx={{
@@ -155,7 +155,7 @@ const Phase: React.FC = () => {
                   color: '#141633',
                 }}
               >
-                Research & Plan
+                Engineer & Develop
               </Heading>
               <p
                 sx={{
@@ -165,9 +165,9 @@ const Phase: React.FC = () => {
                   mt: 0,
                 }}
               >
-                Just like building a house, we start with architecture.
-                Together, we’ll find the most effective solution to your unique
-                business challenges.
+                After you’ve approved the final high-fidelity design, our team
+                gets to work solving the technical puzzles needed to bring your
+                app to life.
               </p>
             </div>
           </Flex>
@@ -191,7 +191,7 @@ const Phase: React.FC = () => {
                   color: '#5A54FF',
                 }}
               >
-                Phase 1
+                Phase 4
               </p>
               <Heading
                 sx={{
@@ -200,7 +200,7 @@ const Phase: React.FC = () => {
                   color: '#141633',
                 }}
               >
-                Research & Plan
+                Test & Deploy
               </Heading>
               <p
                 sx={{
@@ -210,9 +210,8 @@ const Phase: React.FC = () => {
                   mt: 0,
                 }}
               >
-                Just like building a house, we start with architecture.
-                Together, we’ll find the most effective solution to your unique
-                business challenges.
+                Our engineering team thoroughly tests the code and eliminates
+                any problems. They also oversee deployment for a smooth launch.
               </p>
             </div>
           </Flex>

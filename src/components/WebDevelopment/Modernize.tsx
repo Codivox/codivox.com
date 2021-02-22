@@ -9,9 +9,9 @@ import Ovalx from '../../images/Ovalx';
 const Modernize: React.FC = () => {
   const brandTitle = 'Make your users amazed with blazing fast Wordpress site';
   const brandSubtitle =
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In imperdiet dui non ex maximus varius. Fusce interdum felis at aliquet maximus. Vivamus tempor mauris ut molestie cursusm a.';
+    'We build high performance front end for headless Wordpress which will provide you good of both worlds.';
   return (
-    <div sx={{ background: 'rgba(244, 245, 255, 0.5)', minHeight: '606px' }}>
+    <div sx={{ background: 'rgba(244, 245, 255, 0.5)' }}>
       <Box
         sx={{
           m: '0 auto',
@@ -22,23 +22,20 @@ const Modernize: React.FC = () => {
         <hr
           sx={{
             border: '1px solid #A7ADFF',
+            opacity: 0.2,
           }}
         />
         <Box sx={{ textAlign: 'center', pt: '77px' }}>
           <Heading
             sx={{
-              fontSize: ['26px', '38px'],
+              fontSize: ['26px', '32px'],
               width: ['100%', 492],
               m: '0 auto',
               fontWeight: 600,
             }}
           >
-            Modernize your wordpress site using Gatsby
+            Modernize your wordpress site using Gatsby ✨
           </Heading>
-          <p sx={{ opacity: '0.85', width: ['100%', 492], m: '0 auto' }}>
-            We build high performance front end forheadless Wordpress which will
-            provide you goog of both worlds.
-          </p>
 
           <Flex sx={{ position: 'absolute', display: ['none', 'block'] }}>
             <Box sx={{ position: 'relative', top: '-150px' }}>
@@ -74,7 +71,6 @@ const Modernize: React.FC = () => {
             sx={{
               display: 'grid',
               gridTemplateRows: 'auto auto auto',
-              height: ['calc( 300px )', 'calc( 400px )'],
               gridTemplateColumns: ['100%'],
               gridColumn: [1, null],
               textAlign: ['center', 'left'],
@@ -82,30 +78,35 @@ const Modernize: React.FC = () => {
           >
             <Heading
               sx={{
-                fontSize: ['27px', '28px'],
+                fontSize: ['24px', '26px'],
                 maxWidth: '450px',
-                mt: ['10px', '100px'],
               }}
             >
               {brandTitle}
             </Heading>
-            <p sx={{ opacity: '0.85', mt: ['10px', '-35px'] }}>
-              {brandSubtitle}
-            </p>
+            <p sx={{ opacity: '0.85' }}>{brandSubtitle}</p>
           </Flex>
-          <ModernizeImg
+          <Flex
             sx={{
-              gridRow: [1, 'unset'],
-              gridColumn: [1, 'unset'],
-              width: '100%',
+              justifyContent: 'center',
+              alignItems: 'center',
             }}
-          />
+          >
+            <ModernizeImg
+              sx={{
+                gridRow: [1, 'unset'],
+                gridColumn: [1, 'unset'],
+                maxWidth: '250px',
+              }}
+            />
+          </Flex>
         </Box>
         <hr
           sx={{
             border: '1px solid #A7ADFF',
             position: 'relative',
-            bottom: '-33px',
+            bottom: '-31px',
+            opacity: 0.2,
           }}
         />
       </Box>

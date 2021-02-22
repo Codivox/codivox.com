@@ -13,7 +13,7 @@ function PhaseRocket(props: React.SVGProps<SVGSVGElement>) {
         fill="#5A54FF"
         fillOpacity={0.2}
       />
-      <g clipPath="url(#prefix__clip0)">
+      <g clipPath="url(#prefix__clip90)">
         <path
           d="M85.609 98.36c0 3.482-1.252 6.818-3.476 9.262L81 108.867l-1.133-1.245c-2.223-2.444-3.475-5.78-3.475-9.262h9.217z"
           fill="#FDC510"
@@ -48,7 +48,7 @@ function PhaseRocket(props: React.SVGProps<SVGSVGElement>) {
         />
       </g>
       <defs>
-        <clipPath id="prefix__clip0">
+        <clipPath id="prefix__clip90">
           <path fill="#fff" transform="translate(55 52)" d="M0 0h52v58H0z" />
         </clipPath>
       </defs>

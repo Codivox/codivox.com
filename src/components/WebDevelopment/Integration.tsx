@@ -9,9 +9,9 @@ const Integration: React.FC = () => {
   const brandTitle =
     'Payment gateways, email & SMS integration, we can do it all.';
   const brandSubtitle =
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In imperdiet dui non ex maximus varius. Fusce interdum felis at aliquet maximus. Vivamus tempor mauris ut molestie cursusm a.';
+    'We deliver solid product integrations that can automate your business processes.';
   return (
-    <div sx={{ background: 'rgba(244, 245, 255, 0.5)', minHeight: '626px' }}>
+    <div sx={{ background: 'rgba(244, 245, 255, 0.5)' }}>
       <Box
         sx={{
           m: '0 auto',
@@ -22,23 +22,20 @@ const Integration: React.FC = () => {
         <hr
           sx={{
             border: '1px solid #A7ADFF',
+            opacity: 0.2,
           }}
         />
         <Box sx={{ textAlign: 'center', pt: '77px' }}>
           <Heading
             sx={{
-              fontSize: ['26px', '38px'],
+              fontSize: ['26px', '32px'],
               width: ['100%', 577],
               m: '0 auto',
               fontWeight: 600,
             }}
           >
-            Integrate your existing web app to external systems
+            Integrate your existing web app to external systems 🪢
           </Heading>
-          <p sx={{ opacity: '0.85', width: ['100%', 464], m: '0 auto' }}>
-            We deliver solid product integrations that can automate your
-            business processes.
-          </p>
 
           <Flex sx={{ position: 'absolute', display: ['none', 'block'] }}>
             <Box sx={{ position: 'relative', top: '-150px' }}>
@@ -72,7 +69,6 @@ const Integration: React.FC = () => {
             sx={{
               display: 'grid',
               gridTemplateRows: 'auto auto auto',
-              height: ['calc( 300px )', 'calc( 400px )'],
               gridTemplateColumns: ['100%'],
               gridColumn: [1, null],
               textAlign: ['center', 'left'],
@@ -80,31 +76,36 @@ const Integration: React.FC = () => {
           >
             <Heading
               sx={{
-                fontSize: ['27px', '28px'],
+                fontSize: ['24px', '26px'],
                 maxWidth: '520px',
-                mt: ['10px', '100px'],
                 width: ['100%', 445],
               }}
             >
               {brandTitle}
             </Heading>
-            <p sx={{ opacity: '0.85', mt: ['10px', '-35px'] }}>
-              {brandSubtitle}
-            </p>
+            <p sx={{ opacity: '0.85' }}>{brandSubtitle}</p>
           </Flex>
-          <IntegrationImg
+          <Flex
             sx={{
-              gridRow: [1, 'unset'],
-              gridColumn: [1, 'unset'],
-              width: '100%',
+              justifyContent: 'center',
+              alignItems: 'center',
             }}
-          />
+          >
+            <IntegrationImg
+              sx={{
+                gridRow: [1, 'unset'],
+                gridColumn: [1, 'unset'],
+                width: '250px',
+              }}
+            />
+          </Flex>
         </Box>
         <hr
           sx={{
             border: '1px solid #A7ADFF',
             position: 'relative',
             bottom: '-33px',
+            opacity: 0.2,
           }}
         />
       </Box>
