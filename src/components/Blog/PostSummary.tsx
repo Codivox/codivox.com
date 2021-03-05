@@ -47,13 +47,12 @@ const PostSummary = ({ post, titleSize }: PostSummaryProps) => {
           >
             <div>
               {categories.nodes.map((category) => (
-                <Link
-                  to={category.slug}
+                <p
                   key={category.slug}
                   sx={{ textDecoration: 'none', color: 'main' }}
                 >
                   {category.name}
-                </Link>
+                </p>
               ))}
               <Heading
                 sx={{

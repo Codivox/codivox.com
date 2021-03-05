@@ -2,7 +2,6 @@
 import { jsx, Box, Flex, Heading } from 'theme-ui';
 import React from 'react';
 import HeroSVG from '../../images/hero';
-import { Link } from 'gatsby';
 
 const Hero: React.FC = () => {
   const heroTitle =
@@ -43,7 +42,6 @@ const Hero: React.FC = () => {
               fontSize: ['24px', '24px', '38px'],
               mt: [3, 3, 0],
               color: `#000053`,
-              // fontFamily: 'heading',
               display: 'block',
             }}
           >

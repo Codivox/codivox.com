@@ -50,7 +50,7 @@ const Hi: React.FC = () => {
         </p>
         <Flex>
           <Link
-            to={'contact'}
+            to={'/contact'}
             sx={{
               fontWeight: 600,
               variant: 'buttons.outlined',

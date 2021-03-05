@@ -24,6 +24,7 @@ const Blog = ({ data }: BlogProps) => {
           <div sx={{ flex: 2, order: 1, marginLeft: [0, 0, '3rem'] }}>
             {data.wpgraphql.posts.nodes.map((post) => (
               <div
+                key={post.slug}
                 sx={{
                   mb: '3rem',
                   p: '3rem',
