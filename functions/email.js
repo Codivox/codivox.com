@@ -6,14 +6,39 @@ const express = require('express');
 const app = express();
 const Sentry = require('@sentry/node');
 
-const { GATSBY_SENTRY_DSN } = process.env;
+const { SENTRY_DSN } = process.env;
 let sentryInitialized = false;
 (function () {
-  if (GATSBY_SENTRY_DSN) {
-    Sentry.init({ dsn: GATSBY_SENTRY_DSN });
+  if (SENTRY_DSN) {
+    Sentry.init({ dsn: SENTRY_DSN });
     sentryInitialized = true;
   }
 })();
+
+async function reportError(error) {
+  console.warn(error);
+  if (!sentryInitialized) return;
+
+  if (typeof error === 'string') {
+    Sentry.captureMessage(error);
+  } else {
+    Sentry.captureException(error);
+  }
+
+  await Sentry.flush();
+}
+
+function catchErrors(handler) {
+  return async function(event, context) {
+    context.callbackWaitsForEmptyEventLoop = false;
+    try {
+      return await handler.call(this, ...arguments);
+    } catch(e) {
+      await reportError(e);
+      throw e;
+    }
+  };
+}
 
 app.use(helmet());
 app.use(bodyParser.json());
@@ -59,4 +84,4 @@ app.post('/.netlify/functions/email', async (req, res, next) => {
     });
   }
 });
-module.exports.handler = serverless(app);
+module.exports.handler = catchErrors(serverless(app));
