@@ -4,6 +4,17 @@ const axios = require('axios');
 const bodyParser = require('body-parser');
 const express = require('express');
 const app = express();
+const Sentry = require('@sentry/node');
+
+const { GATSBY_SENTRY_DSN } = process.env;
+let sentryInitialized = false;
+(function () {
+  if (GATSBY_SENTRY_DSN) {
+    Sentry.init({ dsn: GATSBY_SENTRY_DSN });
+    sentryInitialized = true;
+  }
+})();
+
 app.use(helmet());
 app.use(bodyParser.json());
 app.post('/.netlify/functions/email', async (req, res, next) => {
@@ -38,6 +49,11 @@ app.post('/.netlify/functions/email', async (req, res, next) => {
       message: 'Message sent successfully',
     });
   } catch (err) {
+    Sentry.addBreadcrumb({
+      category: "Contact Us",
+      message: "Error submitting" + email + fullName + phoneNumber + preference + text,
+      level: Sentry.Severity.Info,
+    });
     res.status(500).json({
       message: 'Something went wrong! Please try again.',
     });
