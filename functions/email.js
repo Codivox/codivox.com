@@ -6,39 +6,8 @@ const express = require('express');
 const app = express();
 const Sentry = require('@sentry/node');
 
-const { SENTRY_DSN } = process.env;
-let sentryInitialized = false;
-(function () {
-  if (SENTRY_DSN) {
-    Sentry.init({ dsn: SENTRY_DSN });
-    sentryInitialized = true;
-  }
-})();
-
-async function reportError(error) {
-  console.warn(error);
-  if (!sentryInitialized) return;
-
-  if (typeof error === 'string') {
-    Sentry.captureMessage(error);
-  } else {
-    Sentry.captureException(error);
-  }
-
-  await Sentry.flush();
-}
-
-function catchErrors(handler) {
-  return async function(event, context) {
-    context.callbackWaitsForEmptyEventLoop = false;
-    try {
-      return await handler.call(this, ...arguments);
-    } catch(e) {
-      await reportError(e);
-      throw e;
-    }
-  };
-}
+Sentry.init({ dsn: process.env.SENTRY_DSN });
+app.use(Sentry.Handlers.errorHandler());
 
 app.use(helmet());
 app.use(bodyParser.json());
@@ -76,12 +45,13 @@ app.post('/.netlify/functions/email', async (req, res, next) => {
   } catch (err) {
     Sentry.addBreadcrumb({
       category: "Contact Us",
-      message: "Error submitting" + email + fullName + phoneNumber + preference + text,
+      message: "Error on form submission, data: " + err.config.data,
       level: Sentry.Severity.Info,
     });
+    Sentry.captureException(err);
     res.status(500).json({
       message: 'Something went wrong! Please try again.',
     });
   }
 });
-module.exports.handler = catchErrors(serverless(app));
+module.exports.handler = serverless(app);
